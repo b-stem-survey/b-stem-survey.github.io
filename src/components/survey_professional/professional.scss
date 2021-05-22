@@ -1,0 +1,102 @@
+.professional-page-1-container {
+  .field-container {
+    display: grid;
+    grid-template-columns: 105px 105px 105px 105px 105px 105px;
+    grid-template-rows: auto;
+    grid-gap: 38px 20px;
+    grid-template-areas:
+    'name name name email email email'
+    'phone phone city city state state'
+    'age gender gender ethnicity ethnicity ethnicity';
+
+    label:nth-child(1) {grid-area: name;}
+    label:nth-child(2) {grid-area: email;}
+    label:nth-child(3) {grid-area: phone;}
+    label:nth-child(4) {grid-area: city;}
+    label:nth-child(5) {grid-area: state;}
+    label:nth-child(6) {grid-area: age;}
+    label:nth-child(7) {grid-area: gender;}
+    label:nth-child(8) {grid-area: ethnicity;}
+  }
+}
+.professional-page-3-container {
+  .field-container {
+    .times-available {
+      .block-wrapper {
+        button {
+          min-width: 0;
+          &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+            width: calc((100% - (10px*5))/5);
+          }
+          &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+            width: calc((100% - (10px*3))/3);
+          }
+          &:nth-child(9), &:nth-child(10), &:nth-child(11) {
+            width: calc((100% - (10px*3))/3);
+          }
+        }
+      }
+    }
+    .age-groups {
+      .block-wrapper {
+        button {
+          min-width: 0;
+          width: calc((100% - (10px*3))/3);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .professional-page-1-container {
+    h2 {text-align: center !important;}
+    .field-container {
+      display: block;
+
+      label {margin-bottom: 30px;}
+    }
+  }
+  .professional-page-3-container {
+    .field-container {
+      .volunteer-interest {
+        .block-wrapper {
+          button {
+            &:nth-child(3) {width: max-content;}
+          }
+        }
+      }
+      .volunteer-way {
+        .block-wrapper {
+          button {
+            width: calc(50% - 10px);
+          }
+        }
+      }
+      .times-available {
+        .block-wrapper {
+          button {
+            min-width: 0;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+              width: calc((100% - (10px*5))/5);
+            }
+            &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+              width: calc((100% - (10px*3))/3);
+            }
+            &:nth-child(9), &:nth-child(10), &:nth-child(11) {
+              width: calc((100% - (10px*3))/3);
+            }
+          }
+        }
+      }
+      .age-groups {
+        .block-wrapper {
+          button {
+            min-width: 0;
+            width: calc((100% - (10px*3))/3);
+          }
+        }
+      }
+    }
+  }
+}

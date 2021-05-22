@@ -1,0 +1,98 @@
+.corporation-page-1-container {
+  .field-container {
+    display: grid;
+    grid-template-columns: 105px 105px 105px 105px 105px 105px;
+    grid-template-rows: auto;
+    grid-gap: 38px 20px;
+    grid-template-areas:
+    'name name name email email email'
+    'companyName companyName companyName affiliation affiliation affiliation'
+    'industry industry city city state state'
+    'companyUrl companyUrl companyUrl companyUrl companyUrl companyUrl';
+
+    label:nth-child(1) {grid-area: name;}
+    label:nth-child(2) {grid-area: email;}
+    label:nth-child(3) {grid-area: companyName;}
+    label:nth-child(4) {grid-area: affiliation;}
+    label:nth-child(5) {grid-area: industry;}
+    label:nth-child(6) {grid-area: city;}
+    label:nth-child(7) {grid-area: state;}
+    label:nth-child(8) {grid-area: companyUrl;}
+  }
+}
+.corporation-page-2-container {
+  .field-container {
+    .learner-amount, .learner-age {
+      label {
+        width: auto;
+      }
+      input {
+        width: 140px;
+      }
+    }
+    .group-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      label {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 290px;
+        font-size: 17px;
+        font-weight: 400;
+        color: #333333;
+        margin: 0 70px 18px 0;
+        cursor: default;
+
+        input {
+          height: 35px;
+          width: 75px;
+        }
+
+        &.group-total {
+          input {
+            background: transparent;
+            border: none;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .corporation-page-1-container {
+    h2 {text-align: center;}
+
+    .field-container {
+      display: block;
+
+      label {margin-bottom: 30px;}
+    }
+  }
+  .corporation-page-2-container {
+    .field-container {
+      .learner-amount, .learner-age {
+        input {width: 108px;}
+      }
+      .group-wrapper {
+        justify-content: space-between;
+
+        label {
+          max-width: calc(50% - 10px);
+          font-size: 15px;
+          margin: 9px 0 0 0;
+
+          input {
+            height: 38px;
+            width: 38px;
+            text-align: center;
+            padding: 4px;
+          }
+        }
+      }
+    }
+  }
+}

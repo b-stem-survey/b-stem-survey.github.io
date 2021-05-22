@@ -1,0 +1,54 @@
+.learner-page-1-container {
+  .field-container {
+    display: grid;
+    grid-template-columns: 115px 220px 355px;
+    grid-template-rows: auto;
+    grid-gap: 38px 20px;
+    grid-template-areas:
+    'name name email'
+    'city city state'
+    'age gender ethnicity'
+    'school school education'
+    'noSchool noSchool noSchool';
+
+    label:nth-child(1) {grid-area: name;}
+    label:nth-child(2) {grid-area: email;}
+    label:nth-child(3) {grid-area: city;}
+    label:nth-child(4) {grid-area: state;}
+    label:nth-child(5) {grid-area: age;}
+    label:nth-child(6) {grid-area: gender;}
+    label:nth-child(7) {grid-area: ethnicity;}
+    .checkbox-wrapper {
+      grid-area: school;
+    }
+    label:nth-child(9) {grid-area: education;}
+  }
+}
+
+@media (max-width: 767.98px) {
+  .survey-container {
+    .learner-page-1-container {
+      h2 {text-align: center;}
+      .field-container {
+        display: block;
+
+        label {margin-bottom: 30px;}
+        .checkbox-wrapper {
+          margin-bottom: 30px;
+
+          label {margin: 0;}
+          .checkbox-container {margin-top: 5px;}
+        }
+      }
+    }
+    .learner-page-4-container {
+      .interest-attend {
+        .block-wrapper {
+          button {
+            &:nth-child(3) {width: max-content;}
+          }
+        }
+      }
+    }
+  }
+}
